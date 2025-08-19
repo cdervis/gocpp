@@ -1,0 +1,34 @@
+---
+BasedOnStyle: LLVM
+ColumnLimit: '90'
+IndentWidth: '2'
+TabWidth: '2'
+UseTab: Never
+MaxEmptyLinesToKeep: '2'
+PointerAlignment: Left
+DerivePointerAlignment: 'false'
+Standard: Cpp11
+AlignConsecutiveMacros: 'true'
+AlignConsecutiveDeclarations: 'true'
+AlignConsecutiveAssignments: 'true'
+AlignEscapedNewlines: Right
+AlignOperands: 'true'
+AllowShortBlocksOnASingleLine: 'false'
+AllowShortCaseLabelsOnASingleLine: 'true'
+AllowShortFunctionsOnASingleLine: 'false'
+AllowShortIfStatementsOnASingleLine: 'false'
+AllowShortLambdasOnASingleLine: 'true'
+AllowShortLoopsOnASingleLine: 'true'
+AlwaysBreakTemplateDeclarations: 'Yes'
+BreakConstructorInitializers: BeforeComma
+BinPackArguments: 'false'
+BinPackParameters: 'false'
+SpacesInCStyleCastParentheses: 'false'
+SpacesInContainerLiterals: 'false'
+SpacesInParentheses: 'false'
+SpacesInSquareBrackets: 'false'
+SpaceInEmptyParentheses: 'false'
+SpacesInAngles: 'false'
+SortUsingDeclarations: 'true'
+SpaceAfterCStyleCast: 'false'
+...

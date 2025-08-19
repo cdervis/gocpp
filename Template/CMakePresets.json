@@ -1,0 +1,66 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "default",
+      "hidden": true,
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+        "ENABLE_CPPCHECK": "ON",
+        "CPM_SOURCE_CACHE": "${sourceDir}/build/cpm_cache"
+      }
+    },
+    {
+      "name": "dev",
+      "description": "Setup preset for use during development only",
+      "inherits": "default",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "ENABLE_HARDENING": "OFF",
+        "ENABLE_ADDRESS_SANITIZER": "OFF"
+      }
+    },
+    {
+      "name": "release",
+      "description": "Setup preset for production builds",
+      "inherits": "default",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "release-hardened",
+      "description": "Setup preset for production builds with hardened C++ code",
+      "inherits": "release",
+      "cacheVariables": {
+        "ENABLE_HARDENING": "ON"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "build-base",
+      "hidden": true,
+      "jobs": 12
+    },
+    {
+      "name": "dev",
+      "description": "Build preset for use during development only",
+      "inherits": "build-base",
+      "configurePreset": "dev"
+    },
+    {
+      "name": "release",
+      "description": "Build preset for production builds",
+      "inherits": "build-base",
+      "configurePreset": "release"
+    },
+    {
+      "name": "release-hardened",
+      "description": "Build preset for production builds with hardened C++ code",
+      "inherits": "build-base",
+      "configurePreset": "release-hardened"
+    }
+  ]
+}
