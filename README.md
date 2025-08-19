@@ -2,7 +2,7 @@
 
 <p><img title="Go C++ logo" src="Resources/gocpp.png" width="300"></p>
 
-## Your quickstart to C++ projects
+### Your quickstart to C++ projects
 
 **[gocpp.dev]**
 
