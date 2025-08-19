@@ -10,8 +10,6 @@
 
 </div>
 
----
-
 With a single command, Go C++ sets up:
 
 - A CMake-based C++ project
